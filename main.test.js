@@ -41,7 +41,7 @@ describe('isInDanger', () => {
 })
 
 describe('isCoasting', () => {
-  it('returns whether a grade is between 60 and 71, inclusive', () => {
+  it('returns whether a grade is between 72 and 83, inclusive', () => {
     expect(isCoasting(71)).toBe(false)
     expect(isCoasting(72)).toBe(true);
     expect(isCoasting(83)).toBe(true);
@@ -50,7 +50,7 @@ describe('isCoasting', () => {
 })
 
 describe('isSucceeding', () => {
-  it('returns whether a grade is between 60 and 71, inclusive', () => {
+  it('returns whether a grade is between 84 and 92, inclusive', () => {
     expect(isSucceeding(83)).toBe(false)
     expect(isSucceeding(84)).toBe(true);
     expect(isSucceeding(92)).toBe(true);
@@ -92,6 +92,15 @@ describe('isTeacher', () => {
   })
 })
 
+describe('isAdmin', () => {
+  it('returns whether the given string is `admin`', () => {
+    expect(isAdmin('student')).toBe(false)
+    expect(isAdmin('admn')).toBe(false)
+    expect(isAdmin('admin is hard')).toBe(false)
+    expect(isAdmin('admin')).toBe(true)
+  })
+})
+
 describe('isElementary', () => {
   it('returns whether the given string is `elementary`', () => {
     expect(isElementary('elementary')).toBe(true)
@@ -118,5 +127,12 @@ describe('notAnElementarySchoolAdministrator', () => {
     expect(notAnElementarySchoolAdministrator('elementary', 'teacher')).toBe(true)
     expect(notAnElementarySchoolAdministrator('college', 'guidance counselor')).toBe(true)
     expect(notAnElementarySchoolAdministrator('pre-k', 'admin')).toBe(true)
+  })
+})
+
+describe('differentPeople', () => {
+  it('returns whether two names are identical or not', () => {
+    expect(differentPeople('colin', 'messi')).toBe(true)
+    expect(differentPeople('colin', 'colin')).toBe(false)
   })
 })
