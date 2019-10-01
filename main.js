@@ -7,7 +7,7 @@ function topScore(x,y) {
 }
 
 function isInDanger(x) {
-return (x<=71) (x>=60 );
+return x>=60 + x<=71;
 
 }
 
@@ -19,32 +19,32 @@ function isSucceeding() {
 
 }
 
-function isFailing() {
-
+function isFailing(x) {
+return x<60;
 }
 
-function isAcing() {
-
+function isAcing(x) {
+return x>92;
 }
 
-function isStudent() {
-
+function isStudent(str) {
+return str==='student';
 }
 
-function isTeacher() {
-
+function isTeacher(str) {
+return str==='teacher';
 }
 
-function isAdmin() {
-
+function isAdmin(str) {
+return str==='admin';
 }
 
-function isElementary() {
-
+function isElementary(str) {
+return str==='elementary';
 }
 
-function notAnElementarySchoolAdministrator() {
-
+function notAnElementarySchoolAdministrator(str) {
+return str
 }
 
 function isMiddleSchoolTeacher() {
