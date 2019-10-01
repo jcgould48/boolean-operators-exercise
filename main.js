@@ -7,16 +7,16 @@ function topScore(x,y) {
 }
 
 function isInDanger(x) {
-return x>=60 + x<=71;
+return (x>=60 && x<=71);
 
 }
 
 function isCoasting(x) {
-return x>= 72, x<=83;
+return (x>=72 && x<=83);
 }
 
-function isSucceeding() {
-
+function isSucceeding(x) {
+return (x>=84 && x<=92);
 }
 
 function isFailing(x) {
@@ -44,11 +44,11 @@ return str==='elementary';
 }
 
 function notAnElementarySchoolAdministrator(str1,str2) {
-return str
+return str1!='elementary' || str2!='admin';
 }
 
 function isMiddleSchoolTeacher(str1,x) {
-return str==='teacher' && x>6;
+return (str1==='teacher' && x>=6) || (str1==='teacher' && x<=8);
 }
 
 function differentPeople(str1, str2) {
