@@ -43,16 +43,16 @@ function isElementary(str) {
 return str==='elementary';
 }
 
-function notAnElementarySchoolAdministrator(str) {
+function notAnElementarySchoolAdministrator(str1,str2) {
 return str
 }
 
-function isMiddleSchoolTeacher() {
-
+function isMiddleSchoolTeacher(str1,x) {
+return str==='teacher' && x>6;
 }
 
-function differentPeople() {
-
+function differentPeople(str1, str2) {
+return str1!=str2;
 }
 
 module.exports = {
