@@ -48,7 +48,7 @@ return str1!='elementary' || str2!='admin';
 }
 
 function isMiddleSchoolTeacher(str1,x) {
-return (str1==='teacher' && x>=6) || (str1==='teacher' && x<=8);
+return (str1==='teacher' && (x>=6 && x<=8));
 }
 
 function differentPeople(str1, str2) {
